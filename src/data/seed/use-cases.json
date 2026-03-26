@@ -1,0 +1,63 @@
+———[
+    {
+          "id": "uc-001",
+          "title": "Procurement Intelligence — Vendor Risk Scoring",
+          "description": "Automate vendor risk assessment using AdiOS data products across ERP, external ratings, and news signals.",
+          "status": "design",
+          "businessValue": 9,
+          "implementationEffort": 5,
+          "priority": "high",
+          "domain": "Procurement",
+          "industry": "Manufacturing",
+          "owner": "Procurement COE",
+          "tags": ["risk", "vendor", "automation"],
+          "graph": {
+                  "nodes": [
+                            { "id": "n1", "type": "businessQuestion", "data": { "label": "Which vendors are high-risk?" }, "position": { "x": 100, "y": 100 } },
+                            { "id": "n2", "type": "dataProduct", "data": { "label": "Vendor Master DP" }, "position": { "x": 400, "y": 50 } },
+                            { "id": "n3", "type": "dataProduct", "data": { "label": "External Risk Ratings DP" }, "position": { "x": 400, "y": 200 } },
+                            { "id": "n4", "type": "aiAgent", "data": { "label": "Risk Scorer (adios-cortex)" }, "position": { "x": 700, "y": 125 } },
+                            { "id": "n5", "type": "outcome", "data": { "label": "Vendor Risk Dashboard" }, "position": { "x": 1000, "y": 125 } }
+                  ],
+                  "edges": [
+                            { "id": "e1", "source": "n2", "target": "n4" },
+                            { "id": "e2", "source": "n3", "target": "n4" },
+                            { "id": "e3", "source": "n4", "target": "n5" }
+                  ]
+          },
+          "createdAt": "2026-03-01T00:00:00Z",
+          "updatedAt": "2026-03-20T00:00:00Z"
+    },
+    {
+          "id": "uc-002",
+          "title": "Finance — Month-End Close Acceleration",
+          "description": "Reduce month-end close from 10 days to 3 by orchestrating journal entries, reconciliations, and variance analysis through AdiOS.",
+          "status": "validate",
+          "businessValue": 10,
+          "implementationEffort": 7,
+          "priority": "critical",
+          "domain": "Finance",
+          "industry": "Financial Services",
+          "owner": "CFO Office",
+          "tags": ["finance", "automation", "close"],
+          "graph": { "nodes": [], "edges": [] },
+          "createdAt": "2026-03-05T00:00:00Z",
+          "updatedAt": "2026-03-22T00:00:00Z"
+    },
+    {
+          "id": "uc-003",
+          "title": "HR — Attrition Prediction and Retention Nudges",
+          "description": "Predict employee attrition 90 days ahead and surface personalised retention nudges to managers via AdiOS.",
+          "status": "ideate",
+          "businessValue": 8,
+          "implementationEffort": 6,
+          "priority": "high",
+          "domain": "HR",
+          "industry": "IT Services",
+          "owner": "CHRO",
+          "tags": ["hr", "attrition", "ai"],
+          "graph": { "nodes": [], "edges": [] },
+          "createdAt": "2026-03-10T00:00:00Z",
+          "updatedAt": "2026-03-10T00:00:00Z"
+    }
+]
